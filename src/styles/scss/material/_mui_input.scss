@@ -1,0 +1,186 @@
+@import "../includes";
+
+.MuiFormControl-root {
+  width: 100%;
+  .MuiInputBase-root,
+  .MuiOutlinedInput-root {
+    @include placeholder-font(14px, 17px, 600, normal, var(--text-4));
+    .MuiInputBase-input {
+      padding: 13px 14px !important;
+      height: auto;
+      @include font(14px, 24px, 600, var(--text-1));
+      background: var(--transparent);
+      @include placeholder-font(14px, 20px, 500, normal, var(--text-4));
+    }
+    legend {
+      width: 0 !important;
+    }
+    //outline-styles
+    .MuiOutlinedInput-notchedOutline {
+      border: $border-input !important;
+    }
+    &.MuiInputBase-adornedStart {
+      padding-left: 16px;
+    }
+    .MuiSvgIcon-root {
+      color: var(--text-3);
+    }
+
+    //Mui Actions
+    &:hover,
+    &:focus {
+      border-color: var(--secondary) !important;
+      .MuiOutlinedInput-notchedOutline {
+        border-color: var(--secondary) !important;
+      }
+    }
+    &.Mui-focused {
+      .MuiOutlinedInput-notchedOutline {
+        border-width: 1px !important;
+      }
+    }
+    &.Mui-error {
+      color: var(--error) !important;
+      .MuiOutlinedInput-notchedOutline {
+        border-color: var(--error) !important;
+      }
+    }
+    &.Mui-disabled {
+      color: var(--text-4);
+      -webkit-text-fill-color: var(--text-4);
+      background-color: var(--white-opacity-07);
+      cursor: not-allowed;
+      &:hover,
+      &:focus {
+        .MuiOutlinedInput-notchedOutline {
+          border: $border-input !important;
+        }
+      }
+    }
+    .Mui-disabled {
+      color: var(--text-4);
+      -webkit-text-fill-color: var(--text-4);
+      cursor: not-allowed;
+    }
+  }
+  .MuiInputAdornment-root {
+    .MuiIconButton-root {
+      color: var(--text-2);
+    }
+    .MuiSvgIcon-root {
+      font-size: 18px;
+      color: var(--text-4);
+    }
+    &.MuiInputAdornment-positionEnd {
+      .MuiIconButton-root {
+        margin-right: -8px !important;
+      }
+    }
+    &.MuiInputAdornment-positionStart {
+      margin-right: 0;
+    }
+  }
+  //error Message
+  .MuiFormHelperText-contained {
+    margin: 6px 0 0;
+    @include font-space(12px, 1.67, bold, normal, var(--text-2));
+    &.Mui-error {
+      color: var(--error) !important;
+    }
+  }
+}
+
+.MuiFormControl-root .MuiOutlinedInput-root {
+  textarea.MuiInputBase-input {
+    padding: 0 !important;
+  }
+}
+
+.MuiFormHelperText-root {
+  margin: 6px 0 0;
+  @include font-space(12px !important, 1.67 !important, bold !important, normal, var(--text-2));
+  &.Mui-error {
+    color: var(--error) !important;
+  }
+}
+
+//Custom Input
+.hidden-input {
+  width: 100px;
+  position: absolute !important;
+  visibility: hidden;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 16px;
+  .password-strength-section {
+    .password-strength {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+      .MuiSvgIcon-root {
+        margin-right: 12px;
+        @include icon(18px, var(--text-4));
+      }
+      @include font(13px, normal, normal, var(--text-1));
+      &.completed {
+        .MuiSvgIcon-root {
+          color: var(--success);
+        }
+        color: var(--text-1);
+      }
+    }
+  }
+}
+.form {
+  &-label {
+    display: inline-block;
+    @include font-space(13px, 20px, 600, normal, var(--text-3));
+  }
+  &-login-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    @include font-space(14px, 20px, 600, normal, var(--text-3));
+  }
+}
+
+// Auto Select
+input:-internal-autofill-selected {
+  @include appearance(none);
+  background-image: none !important;
+  background: var(--transparent) !important;
+  -webkit-text-fill-color: var(--text-1) !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px var(--transparent) inset;
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--text-1) !important;
+}
+
+//Responsive Design
+
+@include small-device-below {
+  .form {
+    &-label {
+      font-size: 12px;
+    }
+    &-login-label {
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+  }
+  .MuiOutlinedInput-root .MuiInputBase-input {
+    padding: 10px 14px;
+  }
+  textarea.MuiOutlinedInput-input {
+    padding: 0 !important;
+  }
+}

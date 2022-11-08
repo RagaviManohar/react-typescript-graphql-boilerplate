@@ -1,0 +1,8 @@
+.MuiLinearProgress-root {
+  background: var(--border-3) !important;
+  border-radius: $round-radius;
+  .MuiLinearProgress-bar {
+    border-radius: $round-radius;
+    background: var(--success) !important;
+  }
+}

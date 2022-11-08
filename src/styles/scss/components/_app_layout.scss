@@ -1,0 +1,40 @@
+.app-dashboard {
+  &-page {
+    height: 100vh;
+  }
+  &-inside {
+    padding-top: 64px;
+    @include sizing(100%, calc(100vh - 64px));
+  }
+  &-sidebar {
+    max-width: $sidebar-width;
+    @include sizing(100%, calc(100vh - 64px));
+  }
+  &-content {
+    @include sizing(100%, calc(100vh - 64px));
+    overflow: auto;
+  }
+}
+
+//Not found
+.notfound-page-content {
+  height: calc(100vh - 64px);
+  .notfound-img-section {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+//Responsive design
+@include small-device-below {
+  .notfound-page-content {
+    height: calc(100vh - 124px);
+  }
+  .app-dashboard {
+    &-content {
+      @include sizing(100%, calc(100vh - 124px));
+      overflow: auto;
+    }
+  }
+}

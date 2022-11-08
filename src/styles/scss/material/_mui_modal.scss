@@ -1,0 +1,170 @@
+//Modal content
+.MuiDialog-container {
+  -webkit-backdrop-filter: $backdrop-blur;
+  backdrop-filter: $backdrop-blur;
+  background: var(--opacity-3) !important;
+  .MuiDialogTitle-root {
+    position: relative;
+    padding: 16px 32px;
+    height: 74px;
+    .modal-close-icon {
+      @include positionTopRight(absolute, 24px, 24px);
+    }
+  }
+  .MuiDialogContent-root {
+    padding: 24px 32px 32px 32px !important;
+  }
+  .MuiDialogActions-root {
+    height: 74px;
+    background: var(--primary-bg-2);
+    padding: 16px 32px;
+  }
+}
+
+.MuiDialog-root {
+  .MuiDialog-paper {
+    border-radius: $radius20;
+    border: $border-modal-outline;
+    background: var(--primary-bg-1);
+  }
+  &.disconnect-wallet-modal {
+    .MuiDialog-container .MuiDialog-paper {
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+  &.large-modal {
+    .MuiDialog-container .MuiDialog-paper {
+      max-width: 700px;
+      width: 100%;
+    }
+  }
+  &.small-modal {
+    .MuiDialog-container .MuiDialog-paper {
+      max-width: 450px;
+      width: 100%;
+    }
+  }
+  &.forms-modal {
+    .MuiDialog-container .MuiDialog-paper {
+      .MuiDialogContent-root {
+        padding: 0 !important;
+        .modal-action-fixed {
+          position: sticky;
+          bottom: 0;
+        }
+        .modal-actions {
+          padding: 16px 32px;
+          height: 74px;
+          background: var(--primary-bg-3);
+        }
+      }
+    }
+  }
+  &.modal-confirmation {
+    .MuiDialog-container .MuiDialog-paper {
+      min-width: 400px;
+    }
+  }
+}
+
+//Mui Modal
+
+.MuiModal-root {
+  .MuiPaper-root {
+    border-radius: $radius20;
+    border: $border-modal-outline;
+    background: var(--primary-bg-1);
+    .MuiMenuItem-root {
+      @include font(14px, 44px, 600, var(--text-1));
+      &.Mui-selected {
+        background: var(--primary-bg-3) !important;
+      }
+    }
+  }
+}
+
+//Responsive Design
+@include small-device-below {
+  .MuiDialog-container {
+    .MuiDialogTitle-root {
+      min-height: 74px;
+      padding: 16px 20px !important;
+    }
+    .MuiDialogContent-root {
+      padding: 20px !important;
+    }
+    .MuiDialogActions-root {
+      padding: 16px 20px !important;
+    }
+  }
+  .MuiDialog-root {
+    .MuiDialog-paper {
+      margin: 16px !important;
+    }
+  }
+
+  //Date Picker
+  .MuiPickersToolbar-root {
+    color: var(--dark-text-1) !important;
+  }
+  .MuiDateTimePickerToolbar-root {
+    .MuiTypography-root {
+      color: var(--dark-text-2) !important;
+    }
+    .MuiButton-text {
+      color: var(--dark-text-1) !important;
+    }
+  }
+  .MuiDateTimePickerToolbar-timeContainer {
+    .MuiButton-text {
+      color: var(--primary) !important;
+    }
+  }
+
+  .MuiCalendarPicker-root {
+    div {
+      color: var(--dark-text-1) !important;
+    }
+    .MuiButtonBase-root {
+      .MuiSvgIcon-root {
+        color: var(--dark-text-2) !important;
+      }
+    }
+    .PrivatePickersFadeTransitionGroup-root {
+      color: var(--primary) !important;
+    }
+    .MuiPickersArrowSwitcher-root {
+      .MuiSvgIcon-root {
+        color: var(--dark-text-2) !important;
+      }
+    }
+    .PrivatePickersFadeTransitionGroup-root {
+      .MuiTypography-root {
+        color: var(--dark-text-3) !important;
+      }
+    }
+    .MuiTypography-root {
+      color: var(--dark-text-3) !important;
+    }
+  }
+  .MuiDialogActions-root {
+    .MuiButton-root:nth-child(1) {
+      border: $border-5 !important;
+      color: var(--dark-text-3) !important;
+    }
+    .MuiButton-root:nth-child(2) {
+      background: var(--primary) !important;
+      color: var(--black) !important;
+    }
+    .MuiButton-root.MuiButton-contained.MuiButton-containedError {
+      color: var(--white) !important;
+      background: var(--error) !important;
+    }
+  }
+  .MuiClockPicker-root {
+    span {
+      color: var(--dark-text-2) !important;
+    }
+  }
+}

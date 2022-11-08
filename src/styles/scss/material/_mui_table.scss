@@ -1,0 +1,71 @@
+.MuiTableContainer-root {
+  background-color: var(--primary-bg-2) !important;
+  color: var(--dark-text-2) !important;
+  box-shadow: none !important;
+  border-radius: $radius12;
+  .MuiTable-root {
+    .MuiTableCell-root {
+      font-size: 13px;
+      color: var(--dark-text-2) !important;
+      border-bottom: $border-6;
+      &.MuiTableCell-head {
+        font-weight: bold;
+        background-color: var(--primary-bg-2) !important;
+        color: var(--dark-text-2) !important;
+      }
+      &.MuiTableCell-body {
+        color: var(--dark-text-3) !important;
+      }
+    }
+    td:first-child {
+      color: var(--dark-text-1) !important;
+      font-weight: bold;
+    }
+    .MuiTableBody-root {
+      .MuiTableRow-root {
+        &:hover {
+          background: var(--primary-bg-3);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.custom-fields-table {
+  border-radius: $radius12 !important;
+  overflow: hidden !important;
+  .MuiTableRow-head {
+    th {
+      &:nth-child(6) {
+        width: 120px;
+        max-width: 120px;
+      }
+    }
+  }
+}
+
+//Table Radius
+.table-circled {
+  .MuiPaper-root {
+    border-radius: $radius12;
+  }
+}
+
+//Table page scroll
+
+.organization-list-table {
+  --pagination-height: 142px;
+  .MuiTableContainer-root {
+    height: calc(100vh - 252px);
+  }
+  &.pagination {
+    .MuiTableContainer-root {
+      height: calc(100vh - calc(252px + var(--pagination-height))) !important;
+    }
+  }
+}
+
+.recent-organization-table .MuiTableContainer-root {
+  height: calc(100vh - 368px);
+}

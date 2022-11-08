@@ -1,0 +1,15 @@
+.MuiSwitch-root {
+  .MuiSwitch-track {
+    background: var(--border-2);
+  }
+  .MuiTouchRipple-roo {
+    display: none;
+  }
+  .Mui-checked {
+    color: var(--white) !important;
+    & + .MuiSwitch-track {
+      opacity: 1 !important;
+      background: var(--secondary) !important;
+    }
+  }
+}

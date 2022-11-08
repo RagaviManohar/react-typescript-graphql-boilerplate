@@ -1,0 +1,102 @@
+.MuiChip-root {
+  &.MuiChip-sizeMedium {
+    &.MuiChip-filledSecondary {
+      @include font(10px !important, normal, 600, var(--white) !important);
+      background: var(--secondary-opacity-25);
+    }
+    .MuiChip-label {
+      padding: 0 16px !important;
+    }
+    &.mui-chip-active {
+      background: var(--secondary) !important;
+    }
+  }
+  &.MuiChip-outlinedDefault {
+    background: var(--transparent) !important;
+    border: $border-2 !important;
+    .MuiChip-label {
+      padding: 0 16px !important;
+      @include font(10px, normal, 600, var(--text-2) !important);
+    }
+  }
+  &.MuiChip-colorDefault {
+    background: var(--white-opacity-07);
+  }
+  &.MuiChip-filledSecondary {
+    background: var(--secondary-opacity-25);
+  }
+  &.MuiChip-sizeSmall {
+    height: 20px !important;
+    padding: 0 10px !important;
+    @include font(10px, normal, 600, var(--text-1));
+    .MuiChip-label {
+      padding: 0 !important;
+    }
+    &.MuiChip-outlined {
+      .MuiChip-label {
+        color: var(--text-2);
+        padding: 0 !important;
+      }
+    }
+  }
+  &.MuiChip-colorSuccess {
+    background: var(--success-opacity-5);
+  }
+  &.MuiChip-colorError {
+    background: var(--error-opacity-5);
+  }
+  &.MuiChip-colorInfo {
+    background: var(--warn-opacity-5);
+  }
+  &.MuiChip-deletable {
+    .MuiChip-label {
+      padding: 0 12px 0 16px !important;
+    }
+    .MuiChip-deleteIcon {
+      margin-right: 12px !important;
+    }
+  }
+}
+
+//Status Chips
+.chip-status {
+  height: 28px;
+  @include font(10px !important, normal, bold, var(--white) !important);
+  background: var(--white-opacity-05);
+  &.chip-table {
+    color: var(--text-2) !important;
+  }
+  &.chip-table-success {
+    color: var(--success) !important;
+  }
+  &-large {
+    height: 36px !important;
+    @include font(12px !important, normal, 600, var(--white) !important);
+  }
+}
+
+.chip-status-verified {
+  padding-left: 8px !important;
+  height: 36px !important;
+  @include font(12px !important, normal, 600, var(--text-1) !important);
+  background: var(--white-opacity-07);
+  border-radius: $round-radius !important;
+}
+
+$chipStatus: success --success --success-opacity-15, error --error --error-opacity-15, pending --warn --warn-opacity-15;
+@each $chip in $chipStatus {
+  .chip-#{nth($chip, 1)} {
+    color: var(nth($chip, 2)) !important;
+    background: var(nth($chip, 3)) !important;
+  }
+}
+
+//Project details
+.chip-color-primary {
+  @include font(10px !important, normal, 600, var(--secondary) !important);
+  background: transparent !important;
+  border: $border-4 !important;
+  .MuiChip-label {
+    color: var(--secondary) !important;
+  }
+}

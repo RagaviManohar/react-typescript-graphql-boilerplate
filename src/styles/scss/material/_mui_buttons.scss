@@ -1,0 +1,144 @@
+.MuiButton-root {
+  text-transform: unset !important;
+  box-shadow: none !important;
+  &.MuiButton-contained {
+    &.MuiButton-containedPrimary {
+      @include button-color(var(--black) !important, var(--primary) !important, var(--primary) !important);
+    }
+    &.MuiButton-containedError {
+      @include button-color(var(--white), var(--error), var(--error));
+    }
+    &.Mui-disabled {
+      color: var(--text-4) !important;
+      background: var(--border-4) !important;
+    }
+  }
+  &.MuiButton-header {
+    @include button-color(
+      var(--text-2) !important,
+      var(--white-opacity-07) !important,
+      var(--white-opacity-07) !important
+    );
+    &:hover,
+    &:focus {
+      color: var(--text-1) !important;
+    }
+  }
+  &.MuiButton-outlined {
+    &.MuiButton-outlinedInherit {
+      @include button-color(var(--text-1), var(--transparent), var(--border-1));
+      &:hover,
+      &:focus {
+        background: var(--white-opacity-05) !important;
+      }
+    }
+    &.MuiButton-outlinedError {
+      @include button-color(var(--error), var(--transparent), var(--error));
+      &:hover,
+      &:focus {
+        background: var(--error-opacity-07) !important;
+      }
+    }
+    &.Mui-outline-light {
+      @include button-color(var(--text-3) !important, var(--transparent) !important, var(--border-4) !important);
+    }
+    &.Mui-disabled {
+      color: var(--text-4) !important;
+      border: none !important;
+      background: var(--border-4) !important;
+    }
+  }
+  &.MuiButton-sizeSmall {
+    height: 36px;
+    @include button-color(var(--text-3) !important, var(--transparent) !important, var(--border-5) !important);
+    .MuiButton-iconSizeSmall {
+      font-size: 12px !important;
+    }
+  }
+}
+
+@include for-mobile-below {
+  .MuiButton-header {
+    margin: 0 !important;
+    padding: 8px 8px !important;
+    min-width: auto !important;
+    .MuiButton-startIcon {
+      margin-right: 0 !important;
+      margin-left: 0;
+    }
+  }
+  .add-button {
+    .MuiButton-startIcon {
+      margin-right: 0 !important;
+      margin-left: 0;
+    }
+  }
+  .action-btn {
+    font-size: 13px !important;
+    height: 36px !important;
+  }
+}
+
+//Icon Button
+.header-add-btn {
+  @include size(36px);
+}
+
+//Button classes
+
+.btn-dark-shadow {
+  box-shadow: $btn-dark-shadow;
+}
+
+//Darkmode
+
+body.light-mode {
+  .MuiButton-root {
+    &.MuiButton-header {
+      @include button-color(
+        var(--text-2) !important,
+        var(--white-opacity-07) !important,
+        var(--white-opacity-07) !important
+      );
+      &:hover,
+      &:focus {
+        color: var(--text-1) !important;
+      }
+    }
+  }
+}
+
+//Action Button
+.action-btn {
+  font-size: 14px !important;
+  height: 44px;
+  border-radius: $radius6 !important;
+}
+
+.table-action-btn {
+  display: grid;
+  place-items: center;
+  padding: 0 !important;
+  @include size(36px !important);
+  min-width: inherit !important;
+  font-size: 14px !important;
+  border-radius: $circle-radius !important;
+  .MuiButton-startIcon {
+    color: var(--text-3) !important;
+    margin: 0 !important;
+  }
+  &:hover,
+  &:focus {
+    background: var(--border-5) !important;
+    .MuiButton-startIcon {
+      color: var(--text-2) !important;
+    }
+  }
+}
+
+//Super admin Button
+.login-btn {
+  font-size: 14px !important;
+  height: 50px;
+  border-radius: $radius6 !important;
+}

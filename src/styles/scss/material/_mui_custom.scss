@@ -1,0 +1,122 @@
+.MuiAvatar-root {
+  @include font(14px !important, normal, bold, var(--text-1) !important);
+  background: var(--primary-bg-1) !important;
+  &.bordered {
+    border: $border-avatar;
+  }
+  &.large-bordered {
+    border: $border-avatar-large;
+  }
+  &.large {
+    font-size: 22px !important;
+    @include size(100px);
+  }
+  &.medium {
+    @include size(50px);
+  }
+  &.small {
+    @include size(36px);
+  }
+  &.ex-small {
+    @include size(36px);
+  }
+  .MuiAvatar-img {
+    object-fit: contain !important;
+  }
+}
+
+//Responsive avatar
+@include small-device-below {
+  .MuiAvatar-root {
+    font-size: 12px !important;
+    &.large {
+      font-size: 16px !important;
+      @include size(50px !important);
+    }
+    &.medium {
+      @include size(36px);
+    }
+  }
+}
+
+.MuiCircularProgress-root {
+  color: var(--secondary) !important;
+}
+
+//Mui Tooltip
+.MuiTooltip-popper {
+  .MuiTooltip-tooltip {
+    background: var(--success-opacity-15) !important;
+  }
+}
+
+//Mui Alert
+.MuiAlert-root {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 500px;
+  border-radius: $radius6 !important;
+  .MuiIconButton-root {
+    padding: 3px !important;
+  }
+  .MuiAlert-message {
+    @include font(14px !important, normal, bold, var(--text-1) !important);
+  }
+  .MuiAlert-action {
+    padding-top: 0 !important;
+    .MuiButton-root {
+      font-size: 22px !important;
+      padding-left: 12px !important;
+      padding-right: 12px !important;
+      min-width: auto !important;
+    }
+    .MuiSvgIcon-root {
+      color: var(--text-2) !important;
+    }
+  }
+  &.MuiAlert-standardError {
+    background-color: var(--error-alert-bg) !important;
+    .MuiAlert-icon {
+      .MuiIconButton-root {
+        color: var(--error);
+        background-color: var(--error-opacity-15);
+      }
+    }
+  }
+  &.MuiAlert-standardSuccess {
+    background-color: var(--success-alert-bg) !important;
+    .MuiAlert-icon {
+      .MuiIconButton-root {
+        color: var(--success);
+        background-color: var(--success-opacity-15);
+      }
+    }
+    background: var(--success-opacity-5) !important;
+  }
+}
+
+//Mui menu error
+.dropdown-menu {
+  .MuiPaper-root {
+    border-radius: $radius12;
+    border: $border-modal-outline;
+    background: var(--primary-bg-1);
+    .MuiMenuItem-root {
+      @include font(14px !important, normal, bold, var(--text-2) !important);
+      &:hover {
+        background: var(--primary-bg-3);
+      }
+    }
+  }
+}
+
+//Image size
+.image {
+  &-30 {
+    @include size(30px);
+  }
+  &-60 {
+    @include size(60px);
+  }
+}

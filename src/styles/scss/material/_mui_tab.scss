@@ -1,0 +1,20 @@
+.MuiTabs-root {
+  .MuiTabs-scroller {
+    border-bottom: $border-5;
+  }
+  .MuiTab-root {
+    padding: 12px 32px;
+    min-height: 60px;
+    @include font(14px, 20px, 600, var(--text-3));
+    text-transform: unset;
+    &.Mui-selected {
+      color: var(--secondary) !important;
+    }
+  }
+  .MuiTabs-indicator {
+    height: 3px;
+    border-top-left-radius: $radius4;
+    border-top-right-radius: $radius4;
+    background: var(--secondary) !important;
+  }
+}

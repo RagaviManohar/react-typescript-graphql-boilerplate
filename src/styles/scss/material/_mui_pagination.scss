@@ -1,0 +1,34 @@
+.MuiTablePagination-root {
+  color: var(--dark-text-2) !important;
+  .MuiSvgIcon-root {
+    color: var(--dark-text-3) !important;
+  }
+  .MuiTablePagination-actions {
+    .MuiButtonBase-root {
+      &.Mui-disabled {
+        color: var(--dark-text-3) !important;
+      }
+    }
+  }
+}
+
+.MuiPagination-root {
+  background-color: transparent !important;
+  display: flex;
+  justify-content: end;
+  .MuiPagination-ul {
+    margin-top: 24px;
+    .MuiPaginationItem-root {
+      height: 32px;
+      @include font(13px, normal, bold, var(--text-3));
+      line-height: 24px;
+      background-color: var(--primary-bg-2) !important;
+      border-radius: $radius4;
+      &.Mui-selected {
+        background-color: var(--secondary) !important;
+        color: var(--white);
+        border: none;
+      }
+    }
+  }
+}

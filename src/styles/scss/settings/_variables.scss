@@ -1,0 +1,44 @@
+$font-family-primary: "Manrope";
+
+//Border Radius
+$radius4: 4px;
+$radius6: 6px;
+$radius8: 8px;
+$radius10: 10px;
+$radius12: 12px;
+$radius20: 20px;
+$round-radius: 50px;
+$circle-radius: 50%;
+
+//layouts
+$header-height: 64px;
+$admin-login-width: 436px;
+$sidebar-width: 200px;
+
+//App Filter
+$header-blur: blur(10px);
+$backdrop-blur: blur(5px);
+
+//borders
+$border-transparent: 1px solid transparent;
+$border-1: 1px solid var(--border-1);
+$border-2: 1px solid var(--border-2);
+$border-3: 1px solid var(--border-3);
+$border-4: 1px solid var(--border-4);
+$border-5: 1px solid var(--border-5);
+$border-6: 1px solid var(--border-6);
+
+$border-modal-outline: 2px solid var((--border-6));
+$border-avatar: 2px solid var(--border-6);
+$border-avatar-large: 3px solid var((--border-6));
+$border-input: 1px solid var(--border-4);
+$border-disabled: 1px solid var(--border-5);
+
+//Box-shadow
+$btn-dark-shadow: inset 1px 1px 1px 1px var(--white-opacity-05) !important;
+$mobile-menu-shadow: 0 -2px 4px var(--opacity-1);
+
+// Gradient colors
+$projects-dashboard-bg: linear-gradient(to bottom, var(--primary-bg-2) 50%, transparent 50%);
+$admin-login-bg: linear-gradient(to bottom, var(--transparent) -100%, var(--opacity-85));
+$admin-login-bg-light: linear-gradient(to bottom, var(--transparent) -100%, var(--opacity-3));
